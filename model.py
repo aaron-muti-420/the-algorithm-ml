@@ -87,3 +87,4 @@ def log_sharded_tensor_content(weight_name: str, table_name: str, weight_tensor)
   output_tensor = torch.zeros(*weight_tensor.size(), device=torch.device("cuda:0"))
   weight_tensor.gather(out=output_tensor)
   logging.info(f"{output_tensor}", rank=-1)
+//editted by muti aaron
